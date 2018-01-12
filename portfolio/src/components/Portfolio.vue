@@ -2,11 +2,11 @@
   <div class="portfolio-view">
     <h1>Portfolio View</h1>
 
-    <ul>
-      <li v-for="project in projects">
-        <project-component v-bind:name="project.name"></project-component>
-      </li>
-    </ul>
+    <div v-for="project in projects">
+      <project-component
+        v-bind:name="project.name"
+        v-bind:imageSrc="project.imageSrc"></project-component>
+    </div>
 
 
   </div>
@@ -22,10 +22,12 @@
         msg: 'Portfolio View',
         projects: [
           {
-            name: 'Project One'
+            name: 'Mountain Dew — Dewcision 2016',
+            imageSrc: 'dewcision.jpg'
           },
           {
-            name: 'Project Two'
+            name: 'Project Two',
+            imageSrc: 'dewcision.jpg'
           }
         ]
       }
