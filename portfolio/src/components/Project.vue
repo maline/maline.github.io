@@ -10,9 +10,9 @@
           <path class="cls-1" d="M-2-.5v552L2099-.5H-2Z"/>
         </svg>
       </div>
-
       <div class="project__text-content">
         <h2>{{ name }}</h2>
+        <p>{{ description }}</p>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
 
   export default {
     name: 'ProjectComponent',
-    props: ['name', 'imageSrc'],
+    props: ['name', 'description', 'imageSrc'],
     data () {
       return {
         msg: 'Project Component'
@@ -34,11 +34,9 @@
 
 <style lang="scss">
 
-  @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-
   .project-component {
     text-align: left;
-    margin-bottom: 100px;
+    margin-bottom: 10em;
     position: relative;
   }
   .project__image-wrapper {
@@ -48,35 +46,45 @@
     display: block;
     text-align: center;
     position: relative;
+    padding:  0.5em 0;
 
     img {
       height: 100%;
       width: 80%;
+      display: block;
+      margin: 0 auto;
     }
   }
   .project__text-wrapper {
-    display:block;
+    display: block;
     position: relative;
   }
 
   .project__text-content {
     width: 80%;
-    min-height: 100px;
-    max-height: 200px;
+    min-height: 200px;
     margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: block;
 
     h2 {
-      font-family: 'Abril Fatface', cursive;
       font-size: 4em;
+      margin-bottom: 0.2em;
+      display: inline-block;
+    }
+
+    p {
+      width: 80%;
     }
   }
 
   .project__bg {
-    /* position: absolute; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    /* background-color: aqua; */
+    z-index: -1;
+
     svg {
       width: 100%;
       height: auto;
