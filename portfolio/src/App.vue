@@ -70,7 +70,13 @@ export default {
   }
 
   a {
-    /* color: #42b983; */
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .wrapper {
@@ -92,6 +98,5 @@ export default {
   }
   .subtitle {
     font-size: 1.25em;
-    /* color: #11181f; */
   }
 </style>
