@@ -44,12 +44,32 @@ module.exports = {
             'scss': [
               'vue-style-loader',
               'css-loader',
-              'sass-loader'
+              'sass-loader',
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  // Provide path to the file with resources
+                  resources: './src/scss/global.scss',
+
+                  // Or array of paths
+                  // resources: ['./path/to/vars.scss', './path/to/mixins.scss']
+                },
+              },
             ],
             'sass': [
               'vue-style-loader',
               'css-loader',
-              'sass-loader?indentedSyntax'
+              'sass-loader?indentedSyntax',
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  // Provide path to the file with resources
+                  resources: './src/scss/global.scss',
+
+                  // Or array of paths
+                  // resources: ['./path/to/vars.scss', './path/to/mixins.scss']
+                },
+              },
             ]
           }
           // other vue-loader options go here

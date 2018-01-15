@@ -38,6 +38,10 @@
     text-align: left;
     margin-bottom: 10em;
     position: relative;
+
+    @include device(mobile) {
+      margin-bottom: 2.5em;
+    }
   }
   .project__image-wrapper {
     height: auto;
@@ -58,6 +62,8 @@
   .project__text-wrapper {
     display: block;
     position: relative;
+    width: 100%;
+    overflow: hidden;
   }
 
   .project__text-content {
@@ -65,15 +71,24 @@
     min-height: 200px;
     margin: 0 auto;
     display: block;
+    overflow: hidden;
 
     h2 {
       font-size: 4em;
       margin-bottom: 0.2em;
       display: inline-block;
+
+      @include device(mobile) {
+        font-size: 2em;
+      }
     }
 
     p {
       width: 80%;
+
+      @include device(mobile) {
+        width: 100%;
+      }
     }
   }
 
@@ -82,13 +97,16 @@
     position: absolute;
     top: 0;
     display: block;
-    /* background-color: aqua; */
     z-index: -1;
 
     svg {
       width: 100%;
       height: auto;
       fill: #f0f0f0;
+    }
+
+    @include device(mobile) {
+      width: 150%;
     }
   }
 

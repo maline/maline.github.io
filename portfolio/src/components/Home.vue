@@ -29,12 +29,25 @@
 
   .home-view {
     background-color: #f0f0f0;
-    padding: 0.1em 0 3em;
+    padding: 0em 0 3em;
+
+    @include device(mobile) {
+      padding-bottom: 2em;
+    }
   }
 
   .intro {
     width: 60%;
-    margin: 0.5em auto 2em;
+    margin: 0em auto 2.5em;
+    text-align: center;
+
+    @include device(tablet) {
+      width: 80%;
+    }
+
+    @include device(mobile) {
+      text-align: left;
+    }
   }
   .home__contact--linkedin {
     /* border: 1px solid red; */

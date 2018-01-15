@@ -67,6 +67,15 @@ export default {
     font-weight: lighter;
     font-size: 1.1em;
     line-height: 1.6em;
+    text-align: left;
+
+    @include device(mobile) {
+      font-size: 0.9em;
+    }
+
+    /* @include device(mobile-retina) {
+      color: lime;
+    } */
   }
 
   a {
@@ -89,14 +98,26 @@ export default {
     background-color: #f0f0f0;
     display: inline-block;
     width: 100%;
+
+    @include device(mobile) {
+    }
   }
 
   .logo {
     color: #e74c3c;
     font-size: 5em;
     margin-bottom: 0;
+
+    @include device(mobile) {
+      font-size: 4em;
+      line-height: 1em;
+    }
   }
   .subtitle {
     font-size: 1.25em;
+
+    @include device(mobile) {
+      margin: 1.1em auto;
+    }
   }
 </style>
