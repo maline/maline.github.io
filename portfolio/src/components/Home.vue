@@ -40,6 +40,7 @@
     width: 60%;
     margin: 0em auto 2.5em;
     text-align: center;
+    position: relative;
 
     @include device(tablet) {
       width: 80%;

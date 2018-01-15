@@ -2,6 +2,11 @@
   <div id="app">
     <div class="wrapper">
       <div class="header">
+        <div class="header__bg">
+          <svg width="2100" height="554" viewBox="0 0 2100 554">
+            <path class="cls-1" d="M-2-.5v552L2099-.5H-2Z"/>
+          </svg>
+        </div>
         <h1 class="logo">Malin Eneström</h1>
         <h3 class="subtitle">– Web Developer –</h3>
       </div>
@@ -92,21 +97,38 @@ export default {
     width: 100%;
     margin: 0 auto;
     display: inline-block;
+    overflow: hidden;
   }
 
   .header {
     background-color: #f0f0f0;
     display: inline-block;
     width: 100%;
+    position: relative;
+  }
 
-    @include device(mobile) {
+  .header__bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+
+    svg {
+      width: 100%;
+      height: auto;
+      fill: #fff;
+    }
+
+    @include device(mobile-small) {
+      width: 240%;
     }
   }
 
   .logo {
     color: #e74c3c;
     font-size: 5em;
-    margin-bottom: 0;
+    margin: 0.3em auto 0;
+    position: relative;
 
     @include device(mobile) {
       font-size: 4em;
@@ -115,6 +137,8 @@ export default {
   }
   .subtitle {
     font-size: 1.25em;
+    position: relative;
+    margin: 1.1em auto 1.5em;
 
     @include device(mobile) {
       margin: 1.1em auto;

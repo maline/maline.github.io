@@ -36,11 +36,11 @@
 
   .project-component {
     text-align: left;
-    margin-bottom: 10em;
+    padding-bottom: 10em;
     position: relative;
 
     @include device(mobile) {
-      margin-bottom: 2.5em;
+     padding-bottom: 2.5em;
     }
   }
   .project__image-wrapper {
@@ -63,15 +63,15 @@
     display: block;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    /* overflow-x: hidden;
+    border: 1px solid red; */
   }
 
   .project__text-content {
     width: 80%;
-    min-height: 200px;
+    /* min-height: 200px; */
     margin: 0 auto;
     display: block;
-    overflow: hidden;
 
     h2 {
       font-size: 4em;
@@ -80,6 +80,7 @@
 
       @include device(mobile) {
         font-size: 2em;
+        line-height: 1.1em;
       }
     }
 
@@ -105,7 +106,7 @@
       fill: #f0f0f0;
     }
 
-    @include device(mobile) {
+    @include device(mobile-small) {
       width: 150%;
     }
   }
