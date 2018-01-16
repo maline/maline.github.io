@@ -40,8 +40,12 @@
     position: relative;
 
     @include device(mobile) {
-     padding-bottom: 2.5em;
+      padding-bottom: 2.5em;
     }
+
+    /* @include device(mobile-small) {
+      padding-bottom: 2.5em;
+    } */
   }
   .project__image-wrapper {
     height: auto;
@@ -63,13 +67,10 @@
     display: block;
     position: relative;
     width: 100%;
-    /* overflow-x: hidden;
-    border: 1px solid red; */
   }
 
   .project__text-content {
     width: 80%;
-    /* min-height: 200px; */
     margin: 0 auto;
     display: block;
 
@@ -82,6 +83,11 @@
         font-size: 2em;
         line-height: 1.1em;
       }
+
+      /* @include device(mobile-small) {
+        font-size: 2em;
+        line-height: 1.1em;
+      } */
     }
 
     p {
@@ -90,6 +96,10 @@
       @include device(mobile) {
         width: 100%;
       }
+
+      /* @include device(mobile-small) {
+        width: 100%;
+      } */
     }
   }
 

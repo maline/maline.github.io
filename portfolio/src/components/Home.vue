@@ -49,6 +49,10 @@
     @include device(mobile) {
       text-align: left;
     }
+
+    /* @include device(mobile-small) {
+      text-align: left;
+    } */
   }
   .home__contact--linkedin {
     /* border: 1px solid red; */

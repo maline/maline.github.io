@@ -1,15 +1,7 @@
 $breakpoint-mobile-small: 375px;
 $breakpoint-mobile: 750px;
 $breakpoint-tablet: 1024px;
-$breakpoint-mobile-retina: 1125px;
 $breakpoint-desktop: 1200px;
-
-$pixel-ratio-old: 2;
-$pixel-ratio-new: 3;
-
-$resolution-old: 192dpi;
-$resolution-new: 288dpi;
-
 
 @mixin device($point) {
   @if $point == mobile-small {
@@ -20,24 +12,18 @@ $resolution-new: 288dpi;
   }
   @if $point == mobile {
     @media
-    (max-width: $breakpoint-mobile)
-    and (-webkit-min-device-pixel-ratio: $pixel-ratio-old)
-    and (min-resolution: $resolution-old) {
-      @content;
-    }
-  }
-  @else if $point == mobile-retina {
-    @media
-    (max-width: $breakpoint-mobile-retina)
-    and (-webkit-min-device-pixel-ratio: $pixel-ratio-new)
-    and (min-resolution: $resolution-new) {
+    (max-width: $breakpoint-mobile) {
       @content;
     }
   }
   @else if $point == tablet {
-    @media (max-width: $breakpoint-tablet)  { @content; }
+    @media (max-width: $breakpoint-tablet)  {
+      @content;
+    }
   }
   @else if $point == desktop {
-    @media (max-width: $breakpoint-desktop)  { @content; }
+    @media (max-width: $breakpoint-desktop)  {
+      @content;
+    }
   }
 }
