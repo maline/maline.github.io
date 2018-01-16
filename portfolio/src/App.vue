@@ -130,11 +130,6 @@ export default {
       font-size: 4em;
       line-height: 1em;
     }
-
-    /* @include device(mobile-small) {
-      font-size: 4em;
-      line-height: 1em;
-    } */
   }
   .subtitle {
     font-size: 1.25em;

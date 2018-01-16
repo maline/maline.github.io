@@ -4,7 +4,8 @@
       <project-component
         v-bind:name="project.name"
         v-bind:description="project.description"
-        v-bind:imageSrc="project.imageSrc"></project-component>
+        v-bind:imageSrc="project.imageSrc"
+        v-bind:awards="project.awards"></project-component>
     </div>
 
 
@@ -21,23 +22,50 @@
         projects: [
           {
             name: 'Mountain Dew — Dewcision 2016',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            description: '<ul><li>React</li><li>Redux</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
             imageSrc: 'dewcision.jpg'
           },
           {
             name: 'Clash of Clans.com',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            description: '<ul><li>React</li><li>Flux pattern</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
             imageSrc: 'clashofclans.png'
           },
           {
             name: 'HBO Connect',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            description: '<ul><li>Browserify</li><li>Responsive</li><li>Component based</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
             imageSrc: 'hbo.png'
           },
           {
             name: 'Aflac.com',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            description: '<ul><li>Browserify</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
             imageSrc: 'aflac.png'
+          },
+          {
+            name: 'PSCU – Make Your Money Matter',
+            description: '<ul><li>Browserify</li><li>SVG animations</li><li>http://makeyourmoneymatter.org/</li><li>Awards</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            imageSrc: 'pscu.png',
+            awards: [
+              {
+                type: 'awwwards',
+                prize: 'Site of the Day'
+              },
+              {
+                type: 'addy',
+                prize: 'National Winner'
+              },
+              {
+                type: 'addy',
+                prize: 'Gold District Winner'
+              },
+              {
+                type: 'csswinner',
+                prize: 'Website of the Year'
+              },
+              {
+                type: 'csswinner',
+                prize: 'Website of the Day'
+              }
+            ]
           }
         ]
       }

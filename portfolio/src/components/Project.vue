@@ -12,7 +12,14 @@
       </div>
       <div class="project__text-content">
         <h2>{{ name }}</h2>
-        <p>{{ description }}</p>
+        <p v-html="description">{{ description }}</p>
+        <ul v-if="awards" class="project__awards">
+          <li v-for="award in awards">
+            <award-component
+              v-bind:type="award.type"
+              v-bind:prize="award.prize"></award-component>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -20,13 +27,18 @@
 
 <script>
 
+  import AwardComponent from './Award.vue'
+
   export default {
     name: 'ProjectComponent',
-    props: ['name', 'description', 'imageSrc'],
+    props: ['name', 'description', 'imageSrc', 'awards'],
     data () {
       return {
         msg: 'Project Component'
       }
+    },
+    components: {
+      AwardComponent
     }
   }
 
@@ -42,10 +54,6 @@
     @include device(mobile) {
       padding-bottom: 2.5em;
     }
-
-    /* @include device(mobile-small) {
-      padding-bottom: 2.5em;
-    } */
   }
   .project__image-wrapper {
     height: auto;
@@ -83,11 +91,6 @@
         font-size: 2em;
         line-height: 1.1em;
       }
-
-      /* @include device(mobile-small) {
-        font-size: 2em;
-        line-height: 1.1em;
-      } */
     }
 
     p {
@@ -96,10 +99,18 @@
       @include device(mobile) {
         width: 100%;
       }
+    }
+  }
 
-      /* @include device(mobile-small) {
-        width: 100%;
-      } */
+  .project__awards {
+    list-style-type: none;
+    width: 100%;
+    margin: 1.2em 0 0 0;
+
+    li {
+      display: inline-block;
+      float: left;
+      margin-left: 0;
     }
   }
 
