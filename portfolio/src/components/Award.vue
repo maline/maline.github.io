@@ -1,7 +1,9 @@
 <template>
   <div class="award-component">
-    <div class="award__image">{{ type }}</div>
-    <div class="award__prize">{{ prize }}</div>
+    <div v-bind:class="imageClass">
+      <img v-bind:src="'src/assets/images/awards/' + type + '.jpg'" />
+    </div>
+    <div v-html="prize" class="award__prize">{{ prize }}</div>
   </div>
 </template>
 
@@ -14,6 +16,11 @@
       return {
         msg: 'Award Component'
       }
+    },
+    computed: {
+      imageClass: function () {
+        return 'award__image award__image--' + this.type
+      }
     }
   }
 
@@ -22,9 +29,21 @@
 <style lang="scss">
 
   .award-component {
-    border: 1px solid red;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    margin-top: 1.2em;
+  }
+
+  .award__image {
+    background-size: 100% auto;
+
+    img {
+      width: 100%;
+    }
+  }
+  .award__prize {
+    font-size: 0.5em;
+    text-transform: uppercase;
+    text-align: center;
   }
 
 </style>

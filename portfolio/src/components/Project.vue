@@ -2,7 +2,7 @@
   <div class="project-component">
 
     <div class="project__image-wrapper">
-      <img v-bind:src="'assets/images/' + imageSrc" />
+      <img v-bind:src="'src/assets/images/' + imageSrc" />
     </div>
     <div class="project__text-wrapper">
       <div class="project__bg">
@@ -105,12 +105,13 @@
   .project__awards {
     list-style-type: none;
     width: 100%;
-    margin: 1.2em 0 0 0;
+    margin: 0;
+    text-align: center;
 
     li {
       display: inline-block;
       float: left;
-      margin-left: 0;
+      margin: 0 1.2em 0 0;
     }
   }
 

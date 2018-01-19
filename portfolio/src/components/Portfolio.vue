@@ -46,24 +46,54 @@
             imageSrc: 'pscu.png',
             awards: [
               {
+                type: 'addy',
+                prize: 'National <br/>Winner'
+              },
+              {
+                type: 'addy',
+                prize: 'Gold District <br/>Winner'
+              },
+              {
                 type: 'awwwards',
+                prize: 'Site <br/>of the Day'
+              },
+              {
+                type: 'csswinner',
+                prize: 'Website <br/>of the Year'
+              },
+              {
+                type: 'csswinner',
+                prize: 'Website <br/>of the Day'
+              },
+              {
+                type: 'fwa',
+                prize: 'Site <br/>of the Day'
+              },
+              {
+                type: 'sxsw',
+                prize: 'People’s Choice Award'
+              }
+            ]
+          },
+          {
+            name: 'Morgans Hotel Group',
+            description: '<ul><li>Browserify</li><li>http://morganshotelgroup.com</li><li>Awards</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            imageSrc: 'morgans.png',
+            awards: [
+              {
+                type: 'fitc',
+                prize: 'Best Usability'
+              }
+            ]
+          },
+          {
+            name: 'Aldo Shoe Paradise',
+            description: '<ul><li>Flash/AS3</li><li>https://vimeo.com/54040031</li></ul><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis dapibus felis, at convallis ex porta eu. Integer efficitur est sit amet velit elementum elementum. Vestibulum erat augue, mollis vel dignissim in, accumsan in sem. Donec pellentesque augue ligula.',
+            imageSrc: 'aldo.jpg',
+            awards: [
+              {
+                type: 'fwa',
                 prize: 'Site of the Day'
-              },
-              {
-                type: 'addy',
-                prize: 'National Winner'
-              },
-              {
-                type: 'addy',
-                prize: 'Gold District Winner'
-              },
-              {
-                type: 'csswinner',
-                prize: 'Website of the Year'
-              },
-              {
-                type: 'csswinner',
-                prize: 'Website of the Day'
               }
             ]
           }
