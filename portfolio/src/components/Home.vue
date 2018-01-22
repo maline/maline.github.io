@@ -1,6 +1,6 @@
 <template>
   <div class="home-view">
-    <p class=intro>Hello and welcome! I am Malin, a Swedish front-end web developer based in Los Angeles, with over 8 years of experience working in digital marketing. You can find some of my work below, download my resumé <a href="#" target="_blank">here</a>, find me on <a href="https://www.linkedin.com/in/malinenestrom/" target="_blank">Linkedin</a> or <a href="mailto:malin.enestrom@gmail.com">get in touch</a>. You can also find me on the roller derby track where I bring the same intensity and passion that I bring to my life and career.</p>
+    <p class=intro>Hello and welcome! I am Malin, a Swedish front-end web developer based in Los Angeles, with over 8 years of experience working in digital marketing. You can find some of my work below, download my resumé <a href="https://drive.google.com/file/d/17weBRPSBbHNdPWWI-7Uyer7EFDfKDOVr/view?usp=sharing" target="_blank">here</a>, find me on <a href="https://www.linkedin.com/in/malinenestrom/" target="_blank">Linkedin</a> or <a href="mailto:malin.enestrom@gmail.com">get in touch</a>. You can also find me on the roller derby track where I bring the same intensity and passion that I bring to my life and career.</p>
 
     <div class="home__contact--linkedin">
       <a href="https://www.linkedin.com/in/malinenestrom/" target="_blank">
