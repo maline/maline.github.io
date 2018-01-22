@@ -64,11 +64,19 @@
     position: relative;
     padding:  0.5em 0;
 
+    @include device(mobile) {
+      padding:  0.25em 0;
+    }
+
     img {
       height: 100%;
       width: 80%;
       display: block;
       margin: 0 auto;
+
+      @include device(mobile) {
+        width: 100%;
+      }
     }
   }
   .project__text-wrapper {
