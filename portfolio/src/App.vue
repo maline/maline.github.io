@@ -41,7 +41,7 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: $dark-grey;
     text-align: center;
     overflow: auto;
   }
@@ -80,7 +80,7 @@ export default {
   }
 
   a {
-    color: #e74c3c;
+    color: $red;
     text-decoration: none;
     font-weight: normal;
 
@@ -97,7 +97,7 @@ export default {
   }
 
   .header {
-    background-color: #f0f0f0;
+    background-color: $light-grey;
     display: inline-block;
     width: 100%;
     position: relative;
@@ -112,7 +112,7 @@ export default {
     svg {
       width: 100%;
       height: auto;
-      fill: #fff;
+      fill: $white;
     }
 
     @include device(mobile-small) {
@@ -121,7 +121,7 @@ export default {
   }
 
   .logo {
-    color: #e74c3c;
+    color: $red;
     font-size: 5em;
     margin: 0.3em auto 0;
     position: relative;

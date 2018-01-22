@@ -82,6 +82,10 @@
     margin: 0 auto;
     display: block;
 
+    @include device(desktop-large) {
+      width: 60%;
+    }
+
     h2 {
       font-size: 4em;
       margin-bottom: 0.2em;
@@ -90,14 +94,6 @@
       @include device(mobile) {
         font-size: 2em;
         line-height: 1.1em;
-      }
-    }
-
-    p {
-      width: 80%;
-
-      @include device(mobile) {
-        width: 100%;
       }
     }
   }
@@ -125,7 +121,7 @@
     svg {
       width: 100%;
       height: auto;
-      fill: #f0f0f0;
+      fill: $light-grey;
     }
 
     @include device(mobile-small) {

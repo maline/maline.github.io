@@ -1,7 +1,7 @@
 <template>
   <div class="award-component">
     <div v-bind:class="imageClass">
-      <img v-bind:src="'src/assets/images/awards/' + type + '.jpg'" />
+      <img v-bind:src="'src/assets/images/awards/' + type + '.png'" />
     </div>
     <div v-html="prize" class="award__prize">{{ prize }}</div>
   </div>
