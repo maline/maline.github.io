@@ -6,19 +6,19 @@ import PortfolioView from './components/Portfolio'
 
 
 // install router
-Vue.use(VueRouter)
-
-const routes = [
-  { path: '/home', component: HomeView },
-  { path: '/portfolio', component: PortfolioView }
-]
-
-const router = new VueRouter({
-  routes // short for `routes: routes`
-})
+// Vue.use(VueRouter)
+//
+// const routes = [
+//   { path: '/home', component: HomeView },
+//   { path: '/portfolio', component: PortfolioView }
+// ]
+//
+// const router = new VueRouter({
+//   routes // short for `routes: routes`
+// })
 
 new Vue({
   el: '#app',
-  router,
+  // router,
   render: h => h(App)
 })
