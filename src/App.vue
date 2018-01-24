@@ -11,8 +11,6 @@
         <h3 class="subtitle">– Web Developer –</h3>
       </div>
 
-      <!-- <router-link to="/home">Home</router-link>
-      <router-link to="/portfolio">Portfolio</router-link> -->
       <!-- <router-view></router-view> -->
       <home-view></home-view>
       <portfolio-view></portfolio-view>
@@ -36,6 +34,7 @@ export default {
 <style lang="scss">
 
   @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300,400');
+  @import 'src/assets/scss/global.scss';
 
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -112,7 +111,7 @@ export default {
     svg {
       width: 100%;
       height: auto;
-      fill: $white;
+      fill: white; // $white;
     }
 
     @include device(mobile-small) {

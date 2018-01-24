@@ -20,12 +20,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomeView'
-  }
+export default {
+  name: 'HomeView'
+}
 </script>
 
 <style lang="scss">
+  @import 'src/assets/scss/global.scss';
 
   .home-view {
     background-color: $light-grey;

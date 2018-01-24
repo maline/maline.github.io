@@ -2,7 +2,7 @@
   <div class="project-component">
 
     <div class="project__image-wrapper">
-      <img v-bind:src="'src/assets/images/' + imageSrc" />
+      <img v-bind:src="getImage" />
     </div>
     <div class="project__text-wrapper">
       <div class="project__bg">
@@ -14,7 +14,7 @@
         <h2>{{ name }}</h2>
         <p v-html="description">{{ description }}</p>
         <ul v-if="awards" class="project__awards">
-          <li v-for="award in awards">
+          <li v-for="award in awards" :key="award.index">
             <award-component
               v-bind:type="award.type"
               v-bind:prize="award.prize"></award-component>
@@ -27,24 +27,30 @@
 
 <script>
 
-  import AwardComponent from './Award.vue'
+import AwardComponent from './Award.vue'
 
-  export default {
-    name: 'ProjectComponent',
-    props: ['name', 'description', 'imageSrc', 'awards'],
-    data () {
-      return {
-        msg: 'Project Component'
-      }
-    },
-    components: {
-      AwardComponent
+export default {
+  name: 'ProjectComponent',
+  props: ['name', 'description', 'imageSrc', 'awards'],
+  data () {
+    return {
+      msg: 'Project Component'
+    }
+  },
+  components: {
+    AwardComponent
+  },
+  computed: {
+    getImage () {
+      return require('../assets/images/' + this.imageSrc)
     }
   }
+}
 
 </script>
 
 <style lang="scss">
+  @import 'src/assets/scss/global.scss';
 
   .project-component {
     text-align: left;

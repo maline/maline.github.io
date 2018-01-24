@@ -1,7 +1,7 @@
 <template>
   <div class="award-component">
     <div v-bind:class="imageClass">
-      <img v-bind:src="'src/assets/images/awards/' + type + '.png'" />
+      <img v-bind:src="getImage" />
     </div>
     <div v-html="prize" class="award__prize">{{ prize }}</div>
   </div>
@@ -9,20 +9,23 @@
 
 <script>
 
-  export default {
-    name: 'AwardComponent',
-    props: ['type', 'prize'],
-    data () {
-      return {
-        msg: 'Award Component'
-      }
+export default {
+  name: 'AwardComponent',
+  props: ['type', 'prize'],
+  data () {
+    return {
+      msg: 'Award Component'
+    }
+  },
+  computed: {
+    imageClass: function () {
+      return 'award__image award__image--' + this.type
     },
-    computed: {
-      imageClass: function () {
-        return 'award__image award__image--' + this.type
-      }
+    getImage () {
+      return require('../assets/images/awards/' + this.type + '.png')
     }
   }
+}
 
 </script>
 
