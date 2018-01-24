@@ -9,7 +9,7 @@ exports.assetsPath = function (_path) {
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
 
-  return path.posix.join('dist/', assetsSubDirectory, _path)
+  return path.posix.join(assetsSubDirectory, _path)
 }
 
 exports.cssLoaders = function (options) {
